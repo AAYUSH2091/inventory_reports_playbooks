@@ -1,0 +1,23 @@
+---
+- name: generate WEB report
+  hosts: ios
+  become: true
+  tasks:
+    - name: Generate report
+      ansible.builtin.include_role:
+        name: network.inventory_reports.generate_report
+      vars:
+        resources:
+          - "interfaces"
+          - "l3_interfaces"
+        data_store:
+            scm:
+              parent_directory: "/data/ansible-scm"  # ✅ Add this line!
+              origin:
+                url: "https://github.com/AAYUSH2091/testing_1.git"
+                token: "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"
+                user:
+                  name: "AAYUSH2091"
+                  email: "aaanand@redhat.com"
+
+        
