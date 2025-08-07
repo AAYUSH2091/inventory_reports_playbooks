@@ -1,6 +1,6 @@
 ---
 - name: generate WEB report
-  hosts: ios
+  hosts: ansible_1
   become: true
   tasks:
     - name: Generate report
