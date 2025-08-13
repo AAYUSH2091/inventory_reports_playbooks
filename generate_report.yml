@@ -9,15 +9,12 @@
       vars:
         resources:
           - "interfaces"
-          
         data_store:
-            scm:
-              parent_directory: "/data/ansible-scm"  
-              origin:
-                url: "https://github.com/AAYUSH2091/testing_repo.git"
-                token: "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"
-                user:
-                  name: "AAYUSH2091"
-                  email: "aaanand@redhat.com"
-
-        
+          scm:
+            parent_directory: "/data/ansible-scm"  
+            origin:
+              url: "{{ github_repo_url }}"
+              token: "{{ github_token }}"
+              user:
+                name: "{{ github_username }}"
+                email: "{{ github_email }}"
