@@ -1,0 +1,21 @@
+---
+- name: Persist Network Reports
+  hosts: ios
+  tasks:
+    - name: Invoke persist role
+      ansible.builtin.include_role:
+        name: network.reports.persist
+      vars: 
+        format: yaml
+        resources:
+          - "bgp_global"
+          - "interfaces"
+        data_store:
+          scm:
+            parent_directory: "{{ persist_parent_directory | default('/data/tmp') }}"
+            origin:
+              url: "{{ persist_github_repo_url }}"
+              token: "{{ persist_github_token }}"
+              user:
+                name: "{{ persist_github_username }}"
+                email: "{{ persist_github_email }}"
