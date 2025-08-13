@@ -15,7 +15,7 @@
               parent_directory: "/data/ansible-scm"  
               origin:
                 url: "https://github.com/AAYUSH2091/testing_repo.git"
-                token: "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"
+                token: "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"
                 user:
                   name: "AAYUSH2091"
                   email: "aaanand@redhat.com"
