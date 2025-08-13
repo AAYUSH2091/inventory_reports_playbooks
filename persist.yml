@@ -4,7 +4,7 @@
   tasks:
     - name: Invoke persist role
       ansible.builtin.include_role:
-        name: network.reports.persist
+        name: network.inventory_reports.persist
       vars: 
         format: yaml
         resources:
