@@ -9,13 +9,13 @@
       vars:
         resources:
           - "interfaces"
-          - "l3_interfaces"
+          
         data_store:
             scm:
-              parent_directory: "/data/ansible-scm"  # ✅ Add this line!
+              parent_directory: "/data/ansible-scm"  
               origin:
-                url: "https://github.com/AAYUSH2091/testing_1.git"
-                token: "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"
+                url: "https://github.com/AAYUSH2091/testing_repo.git"
+                token: "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"
                 user:
                   name: "AAYUSH2091"
                   email: "aaanand@redhat.com"
