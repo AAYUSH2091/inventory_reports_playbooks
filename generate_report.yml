@@ -1,6 +1,6 @@
 ---
 - name: generate WEB report
-  hosts: ansible_1
+  hosts: network
   become: true
   tasks:
     - name: Generate report
