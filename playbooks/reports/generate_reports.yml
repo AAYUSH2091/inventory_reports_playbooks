@@ -9,6 +9,7 @@
       vars:
         resources:
           - "interfaces"
+          - "bgp_global"
         data_store:
           scm:
             parent_directory: "/data/ansible-scm"  
