@@ -1,0 +1,20 @@
+---
+- name: generate WEB report
+  hosts: network
+  become: true
+  tasks:
+    - name: Generate report
+      ansible.builtin.include_role:
+        name: network.inventory_reports.generate_report
+      vars:
+        resources:
+          - "interfaces"
+        data_store:
+          scm:
+            parent_directory: "/data/ansible-scm"  
+            origin:
+              url: "https://github.com/AAYUSH2091/Testing_inventory_reports_roles.git"
+              token: "{{ lookup('env', 'gh_token') }}"
+              user:
+                name: "AAYUSH2091"
+                email: "aaanand@redhat.com"
