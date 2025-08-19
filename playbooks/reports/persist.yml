@@ -8,8 +8,8 @@
       vars: 
         format: yaml
         resources:
-          - "bgp_global"
           - "interfaces"
+          - "l2_interfaces"
         data_store:
           scm:
             parent_directory: "/data/ansible-scm"  
