@@ -1,6 +1,6 @@
 ---
 - name: Persist Network Reports
-  hosts: ios
+  hosts: network
   tasks:
     - name: Invoke persist role
       ansible.builtin.include_role:
