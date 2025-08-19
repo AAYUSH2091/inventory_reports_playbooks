@@ -12,10 +12,10 @@
           - "interfaces"
         data_store:
           scm:
-            parent_directory: "{{ persist_parent_directory | default('/data/tmp') }}"
+            parent_directory: "/data/ansible-scm"  
             origin:
-              url: "{{ persist_github_repo_url }}"
-              token: "{{ persist_github_token }}"
+              url: "https://github.com/AAYUSH2091/Testing_inventory_reports_roles.git"
+              token: "{{ lookup('env', 'gh_token') }}"
               user:
-                name: "{{ persist_github_username }}"
-                email: "{{ persist_github_email }}"
+                name: "AAYUSH2091"
+                email: "aaanand@redhat.com"
