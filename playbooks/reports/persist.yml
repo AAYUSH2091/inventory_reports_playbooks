@@ -1,0 +1,21 @@
+---
+- name: Persist Network Reports
+  hosts: ios
+  tasks:
+    - name: Invoke persist role
+      ansible.builtin.include_role:
+        name: network.inventory_reports.persist
+      vars: 
+        format: yaml
+        resources:
+          - "bgp_global"
+          - "interfaces"
+        data_store:
+          scm:
+            parent_directory: "/data/ansible-scm"  
+            origin:
+              url: "https://github.com/AAYUSH2091/Testing_inventory_reports_roles.git"
+              token: "{{ lookup('env', 'gh_token') }}"
+              user:
+                name: "AAYUSH2091"
+                email: "aaanand@redhat.com"
