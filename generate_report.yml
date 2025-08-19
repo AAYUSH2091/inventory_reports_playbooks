@@ -13,8 +13,8 @@
           scm:
             parent_directory: "/data/ansible-scm"  
             origin:
-              url: "{{ github_repo_url }}"
-              token: "{{ github_token }}"
+              url: "https://github.com/AAYUSH2091/Testing_inventory_reports_roles.git"
+              token: "{{ lookup('env', 'gh_token') }}"
               user:
-                name: "{{ github_username }}"
-                email: "{{ github_email }}"
+                name: "AAYUSH2091"
+                email: "aaanand@redhat.com"
